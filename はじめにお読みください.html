@@ -406,6 +406,33 @@
       いつまでも「待っています…」のままのときは、ケーブルを挿し直す／別の USB ポートを試す／
       Quest を再起動する、を試してください。充電専用のケーブルでは認識されません。
     </div>
+    <h3 id="install-trouble">インストールできないとき</h3>
+    <div class="scroll">
+      <table>
+        <tr><th>症状</th><th>試すこと</th></tr>
+        <tr><td>バッチを開いても何も起きない／一瞬で閉じる</td><td>zip を右クリック →<strong>「すべて展開」</strong>してから、展開したフォルダの中のバッチを開いてください（zip の中から直接は動きません）。
+          展開先はデスクトップなど短い場所がおすすめです。<br>
+          それでも動かないときは、<span class="kbd">tools</span> フォルダの <span class="kbd">install.ps1</span> を右クリック →<strong>「PowerShell で実行」</strong>でも同じことができます</td></tr>
+        <tr><td>「Windows によって PC が保護されました」と出る</td><td><strong>詳細情報 → 実行</strong>を押してください</td></tr>
+        <tr><td>「待っています…」から進まない</td><td>データ通信できる USB ケーブルか（充電専用は不可）／別の USB ポート／Quest の開発者モードが ON か／
+          ヘッドセット内の「USB デバッグを許可」で<strong>「常に許可」</strong>を押したか／SideQuest や Meta Quest Developer Hub を開いていたら閉じる／Quest を再起動</td></tr>
+        <tr><td>adb を取得できない</td><td>インターネットにつながっているか確かめてください。会社のネットワークなどで取得できないときは、
+          <a href="https://developer.android.com/tools/releases/platform-tools">Google のページ</a>から「SDK Platform-Tools for Windows」を取得し、
+          展開してできた <span class="kbd">platform-tools</span> フォルダを <span class="kbd">tools</span> フォルダの中に入れてから、もう一度バッチを開いてください</td></tr>
+        <tr><td>インストールに失敗した</td><td>黒い画面のメッセージを添えて、下の連絡先に送ってください</td></tr>
+      </table>
+    </div>
+    <p>バッチがどうしても使えないときは、次のどれかで <span class="kbd">apk</span> フォルダの
+      <span class="kbd">Sim_Cockpit_Passthrough_*.apk</span> を Quest に入れられます（どれも Quest の開発者モードが必要です）。</p>
+    <ul>
+      <li><strong>SideQuest</strong>（無料）：Quest を USB でつなぎ、画面上の「Install APK file from folder」ボタンで apk を選ぶ</li>
+      <li><strong>Meta Quest Developer Hub</strong>（Meta 公式・無料）：Device Manager の Apps にある「Add Build」に apk をドラッグ</li>
+      <li><strong>コマンド</strong>：展開したフォルダのアドレス欄に <span class="kbd">cmd</span> と入力して Enter を押し、
+        <span class="kbd">tools\platform-tools\adb.exe install -r apk\Sim_Cockpit_Passthrough_1.0.3.apk</span> を実行
+        （adb はバッチを一度開くと <span class="kbd">tools</span> に入ります。apk の名前は実際のファイル名に合わせてください）</li>
+    </ul>
+    <p>手動で入れた場合は、最初の起動で「空間データへのアクセスを許可しますか？」と出たら<strong>許可</strong>してください。
+      それでも入らないときは、X の <a href="https://x.com/noonmonogame">@noonmonogame</a> に DM するか、GitHub の Issues に書いてください。</p>
     <div class="tip">
       初めて起動したとき「<strong>空間データへのアクセスを許可しますか？</strong>」と出たら<strong>許可</strong>してください。
       ステアリング範囲に使います（インストール用のバッチを使った場合は、先に許可済みです）。

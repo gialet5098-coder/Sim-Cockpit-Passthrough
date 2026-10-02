@@ -21,6 +21,7 @@ PC VR ゲームの上に、**ハンドルやシフターなど、自分で選ん
 | ファイル | 内容 |
 |---|---|
 | `1_Questにインストール.bat` | Quest にアプリを入れるバッチ |
+| `tools/install.ps1` | バッチが動かすインストール処理（右クリック →「PowerShell で実行」でも動きます） |
 | `apk/Sim_Cockpit_Passthrough_*.apk` | Quest 3 用アプリ本体 |
 | `pc/alvr_streamer_windows.zip` | PC 用ストリーマー（ALVR 公式の開発版 v21.0.0-dev14 をそのまま同梱） |
 | `はじめにお読みください.html` | 詳しい説明書（ブラウザで開いてください） |
@@ -39,12 +40,18 @@ PC VR ゲームの上に、**ハンドルやシフターなど、自分で選ん
 1. zip を PC のローカルディスクに展開します
 2. `1_Questにインストール.bat` をダブルクリックし、Quest を USB でつなぎます。ヘッドセット内で「USB デバッグを許可」を押してください
    - 初回だけ、通信に使う adb（Google の Android SDK Platform-Tools **r37.0.1**）を Google の公式サイトから取得します。版を固定し、SHA-256 でファイルを確認してから使います
+   - うまくいかないときは、説明書の「**インストールできないとき**」を見てください。バッチが使えない場合の、SideQuest や Meta Quest Developer Hub での入れ方も書いてあります
 3. PC で `pc/alvr_streamer_windows.zip` を展開し、`ALVR Dashboard.exe` を起動します
    - **公式の安定版 v20 系とは接続できません。**必ず同梱のストリーマーを使ってください
 4. Quest で「Sim Cockpit Passthrough」（ライブラリ →「提供元不明」）を起動し、ダッシュボードで Trust を押します
 5. 左手の手のひらのメニューで範囲を作ります。初回は、目の前に**基準アンカー**（位置の基準になる球）が自動で置かれます
 
 詳しい手順と操作は、zip の中の `はじめにお読みください.html` を見てください。
+
+## 開発者モードを使わずに入れたい方へ
+
+Meta Horizon Store の**招待制のテスト版**でも配布しています。ストアから普通にインストールでき、開発者モードや PC での作業は要りません。
+希望する方は X の [@noonmonogame](https://x.com/noonmonogame) に DM してください。招待の案内をお送りします。
 
 ## 保存について
 
@@ -82,6 +89,6 @@ PC VR ゲームの上に、**ハンドルやシフターなど、自分で選ん
 - これらのライセンス文書は、アプリ本体（APK）の中の `assets/licenses` にも入っています
 
 本ソフトウェアは**無保証**です。使用によって生じたいかなる損害についても、作者および ALVR の著作権者は責任を負いません。
-問い合わせは ALVR 公式ではなく、このリポジトリの Issues へお願いします。
+問い合わせは ALVR 公式ではなく、このリポジトリの Issues か、X の [@noonmonogame](https://x.com/noonmonogame) へお願いします。
 
 Meta Quest は Meta Platforms, Inc. の、SteamVR は Valve Corporation の商標です。
