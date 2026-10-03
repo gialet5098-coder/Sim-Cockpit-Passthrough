@@ -473,6 +473,22 @@
       <strong>Settings → Video → Passthrough</strong> は <strong>OFF のまま</strong>にしてください。<br>
       OFF＝このアプリの方式（囲んだ範囲だけが現実に見える）／ON＝ALVR 本来の全面パススルーに切り替わります。
     </div>
+    <h3 id="wired">USB ケーブルでつなぐ（有線接続）</h3>
+    <p>Wi-Fi の代わりに、Quest と<strong>ゲームを動かす PC</strong> を USB ケーブルでつないで映像を送ることもできます。
+      このアプリは公式の ALVR とアプリの名前（パッケージ名）が違うので、<strong>最初に一度だけ</strong>ダッシュボードの設定が必要です。</p>
+    <ol class="steps">
+      <li>ダッシュボードの <strong>Settings → Connection</strong> を開く</li>
+      <li><strong>Wired client type</strong> を <strong>Custom</strong> にして、名前の欄に
+        <span class="kbd">app.simcockpit.passthrough</span> と入力する</li>
+      <li><strong>Wired client autolaunch</strong> を ON にしておくと、つないだときにアプリが自動で起動します</li>
+      <li><strong>Devices</strong> タブの <strong>Wired Connection</strong> を ON にする</li>
+      <li>Quest をゲームの PC に USB ケーブルでつなぐ。ヘッドセット内で「<strong>USB デバッグを許可</strong>」が出たら
+        「このコンピューターから常に許可」にチェックして<strong>許可</strong></li>
+    </ol>
+    <div class="tip">
+      つながらないときは、データ通信できるケーブルか／Quest の開発者モードが ON か／SideQuest や Meta Quest Developer Hub を閉じたか／
+      Quest でアプリが前面に出ているか、を確かめてください。ダッシュボードの Devices タブに有線の Quest が「Disconnected」のまま出ている間は、まだつながっていません。
+    </div>
   </section>
 
   <hr>

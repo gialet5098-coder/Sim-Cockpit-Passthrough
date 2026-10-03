@@ -46,6 +46,14 @@ PC VR ゲームの上に、**ハンドルやシフターなど、自分で選ん
 4. Quest で「Sim Cockpit Passthrough」（ライブラリ →「提供元不明」）を起動し、ダッシュボードで Trust を押します
 5. 左手の手のひらのメニューで範囲を作ります。初回は、目の前に**基準アンカー**（位置の基準になる球）が自動で置かれます
 
+### USB ケーブルでつなぐ場合（有線接続）
+
+このアプリは公式の ALVR とパッケージ名が違うので、最初に一度だけダッシュボードの設定が必要です。
+
+1. ダッシュボードの **Settings → Connection** で **Wired client type** を **Custom** にし、`app.simcockpit.passthrough` と入力します（**Wired client autolaunch** を ON にすると、つないだときに自動で起動します）
+2. **Devices** タブの **Wired Connection** を ON にします
+3. Quest を**ゲームを動かす PC** に USB ケーブルでつなぎ、ヘッドセット内で「USB デバッグを許可」を押します
+
 詳しい手順と操作は、zip の中の `はじめにお読みください.html` を見てください。
 
 ## 開発者モードを使わずに入れたい方へ
